@@ -1,10 +1,10 @@
 /*
- * led.c
+ * main.c
  *
- *  Created on: Apr 8, 2020
- *      Author: jpaine
+ * Created on: May 24, 2020
+ *     Author: Jeffrey Paine
+ *
  */
-
 
 #ifndef F_CPU
 #define F_CPU 16000000UL // or whatever may be your frequency
