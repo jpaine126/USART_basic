@@ -1,3 +1,11 @@
+/*
+ * USART_Init.h
+ *
+ * Created on: May 24, 2020
+ *     Author: Jeffrey Paine
+ *
+ */
+
 #include <avr/io.h>
 
 void USART_Init(unsigned int ubrr)
