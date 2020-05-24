@@ -20,8 +20,9 @@
 #include <util/setbaud.h>
 #include <stdio.h>
 
+#include "USART_Init.h"
 
-
+char chararray[] = "this is a string";
 
 int main(void)
 {
@@ -32,10 +33,10 @@ int main(void)
 
     while(1)
     {
-        USART_putstring(chararray);
+        USART_put_string(chararray);
         _delay_ms(1000);
-        USART_Transmit_char('\n');
-        USART_Transmit_char('\r');
+        USART_transmit_char('\n');
+        USART_transmit_char('\r');
     }
 
 
