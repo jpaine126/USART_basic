@@ -1,5 +1,5 @@
 /*
- * main.c
+ * USART_Init.h
  *
  * Created on: May 24, 2020
  *     Author: Jeffrey Paine
@@ -11,9 +11,6 @@
 #endif
 
 #define BAUD 9600
-#define FOSC 1000000
-
-#define MYUBBR FOSC/16/BAUD-1
 
 #include <avr/io.h>
 #include <util/delay.h>                // for _delay_ms()
@@ -22,14 +19,13 @@
 
 #include "USART_Init.h"
 
-char chararray[] = "this is a string";
+char chararray[] = "this is a string 1234567890 !?<>.(*&";
 
 int main(void)
 {
+    //DDRB |= _BV(DDB5);                      // initialize port B
 
-    // //DDRB |= _BV(DDB5);                      // initialize port B
-
-    USART_Init(MYUBBR);
+    USART_Init();
 
     while(1)
     {
@@ -42,9 +38,3 @@ int main(void)
 
     return 0;
 }
-
-
-
-
-
-
